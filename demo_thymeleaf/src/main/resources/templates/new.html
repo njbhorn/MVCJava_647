@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>New Student</title>
+</head>
+<body>
+	<form th:object="${student}" th:action="@{/new}" method="post">
+		<div>
+			<input type="text" id="id" name="id" th:value="${student.id}">
+		</div>
+		<div>
+			Name : <input type="text" id="name" name="name"
+				th:value="${student.name}">
+		</div>
+		<div>
+			Passport Number : <input type=text id="passportNumber"
+				name="passportNumber" th:value="${student.passportNumber}">
+		</div>
+		<div>
+			<button type="submit">Update</button>
+		</div>
+	</form>
+</body>
+</html>

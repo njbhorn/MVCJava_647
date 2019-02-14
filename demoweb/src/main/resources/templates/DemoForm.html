@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Get info from Form</title>
+</head>
+<body>
+<div th:text="#{messages.home}"></div>
+	<form th:object="${myInfo}" th:action="@{/processForm}" method="post">
+			Enter Info : <input type="text" th:field="*{info}" /> Enter More Info :
+		<input type="text" th:field="*{moreInfo}" />
+		<button type="submit">Submit</button>
+
+	</form>
+</body>
+</html>

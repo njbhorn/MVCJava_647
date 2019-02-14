@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Show Student Details</title>
+</head>
+<body>
+	<div>
+		<div>
+			Name : <span th:text="${student.name}">Name</span>
+		</div>
+		<div>
+			Passport Number : <span th:text="${student.passportNumber}">Passport Number</span>
+		</div>
+		<br>
+		<a th:href="${'/update/' + student.id}">Edit</a>
+		<a th:href="${'/delete/' + student.id}">Delete</a>
+		<a th:href="${'/' }">List</a>
+	</div>
+</body>
+</html>
